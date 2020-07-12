@@ -15,7 +15,7 @@ class _UpperFeddState extends State<UpperFeed> {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-            ///////////////////////////////////////////////////////////////////////////////////////////////////////////7
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////
             border: Border.all(
                 width: 0.1, color: Colors.grey, style: BorderStyle.solid)),
         width: MediaQuery.of(context).size.width * 8 / 10,
@@ -103,7 +103,7 @@ class _UpperFeddState extends State<UpperFeed> {
                               width: 250,
                               child: AutoSizeText(
                                 widget.upperFeed["text"],
-                                overflow: TextOverflow.clip,
+                                overflow: TextOverflow.ellipsis,
                                 maxLines: 2,
                               )),
                           //////////////////////////////////////////////////////////////////////////////////////  TEXT

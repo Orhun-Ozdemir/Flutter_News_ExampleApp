@@ -37,7 +37,6 @@ class _FeedState extends State<FeedPage> {
             future: data(),
             builder: (context, fData) {
               if (fData.connectionState == ConnectionState.done) {
-                debugPrint("bekler");
                 var x = fData.data;
 
                 return SingleChildScrollView(
@@ -65,7 +64,6 @@ class _FeedState extends State<FeedPage> {
                             scrollDirection: Axis.horizontal,
                             itemCount: x["upperFeed"].length,
                             itemBuilder: (context, index) {
-                              debugPrint(index.toString());
                               return InkWell(
                                   onTap: () {
                                     Navigator.push(

@@ -17,73 +17,30 @@ class _EfectState extends State<Efect> {
           child: ListView(children: <Widget>[
             Column(
               children: <Widget>[
-                /////////////////////////////////////////////////////////////////////// UZUN
-                Container(
-                  margin: EdgeInsets.only(top: 20),
-                  color: Colors.green,
-                  height: MediaQuery.of(context).size.height * 0.4 / 10,
-                  width: MediaQuery.of(context).size.width * 9 / 10,
-                ),
+                Box().boldBox(context),
 
-                //////////////////////////////////////////////////////////////////////// KISA
-                Container(
-                  alignment: Alignment.bottomLeft,
-                  margin: EdgeInsets.only(
-                      right: MediaQuery.of(context).size.width * 4 / 10,
-                      top: 10),
-                  color: Colors.green,
-                  height: MediaQuery.of(context).size.height * 0.4 / 10,
-                  width: MediaQuery.of(context).size.width * 5 / 10,
-                ),
-                /////////////////////////////////////////////////////////////////////////// İMG
+                Box().sbolddBox(context),
 
-                /* ListView.builder(itemCount:5,itemBuilder: (context,index){
-
-                return Box().longBox(context);
-
-              })*/
-
-                Container(
-                    margin: EdgeInsets.all(10),
-                    color: Colors.red,
-                    width: MediaQuery.of(context).size.width * 9 / 10,
-                    height: MediaQuery.of(context).size.height * 3 / 10),
+                Box().xlbolddBox(context),
 
                 ///////////////////////////////////////////////////////////////////////////  1
                 Container(
-                  margin: EdgeInsets.only(top: 10),
-                  color: Colors.green,
-                  height: MediaQuery.of(context).size.height * 0.275 / 10,
                   width: MediaQuery.of(context).size.width * 9 / 10,
+                  height: MediaQuery.of(context).size.height * 0.275 * 6 / 10,
+                  child: ListView.builder(
+                      itemCount: 5,
+                      itemBuilder: (context, index) {
+                        return Box().longBox(context);
+                      }),
                 ),
-                ///////////////////////////////////////////////////////////////////////////   2
                 Container(
                   margin: EdgeInsets.only(top: 10),
                   color: Colors.green,
                   height: MediaQuery.of(context).size.height * 0.275 / 10,
                   width: MediaQuery.of(context).size.width * 9 / 10,
                 ),
-                ///////////////////////////////////////////////////////////////////////////   3
-                Container(
-                  margin: EdgeInsets.only(top: 10),
-                  color: Colors.green,
-                  height: MediaQuery.of(context).size.height * 0.275 / 10,
-                  width: MediaQuery.of(context).size.width * 9 / 10,
-                ),
-                ///////////////////////////////////////////////////////////////////////////  4
-                Container(
-                  margin: EdgeInsets.only(top: 10),
-                  color: Colors.green,
-                  height: MediaQuery.of(context).size.height * 0.275 / 10,
-                  width: MediaQuery.of(context).size.width * 9 / 10,
-                ),
-                ///////////////////////////////////////////////////////////////////////////   5
-                Container(
-                  margin: EdgeInsets.only(top: 10),
-                  color: Colors.green,
-                  height: MediaQuery.of(context).size.height * 0.275 / 10,
-                  width: MediaQuery.of(context).size.width * 9 / 10,
-                ), ////////////////////////////////////////////////////////////////////////// KISA
+
+                ///////////////////////////////////////////////////////////////////////////// KISA
                 Container(
                   alignment: Alignment.bottomLeft,
                   margin: EdgeInsets.only(

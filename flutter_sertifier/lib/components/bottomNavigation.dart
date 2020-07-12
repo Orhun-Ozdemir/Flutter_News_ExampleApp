@@ -5,8 +5,6 @@ import 'package:flutter_sertifier/screens/page2/page2.dart';
 import 'package:flutter_sertifier/screens/page3/page3.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../main.dart';
-
 class BottomNavigation extends StatefulWidget {
   @override
   _BottomNavigationState createState() => _BottomNavigationState();
@@ -35,17 +33,17 @@ class _BottomNavigationState extends State<BottomNavigation> {
                     color: currentIndex == 0 ? activeColor : passiveColor),
               ),
             ),
-            icon: SvgPicture.asset(
+            icon: InkWell(
+                child: SvgPicture.asset(
               "assets/icons/Star.svg",
               color: currentIndex == 0
                   ? activeColor
-                  : passiveColor, //////////iconun rengini currentIndex ile beraber pasif ve aktif olrak
+                  : passiveColor, /////////////////////////iconun rengini currentIndex ile beraber pasif ve aktif olrak
               height:
-                  30, //////////  iki renk atadım yer değiştirmelerine göte iconun rengi değişiyor.
-            )),
-        ////////////////////////////////////////////////////////
+                  30, /////////////////////////  iki renk atadım yer değiştirmelerine göte iconun rengi değişiyor.
+            ))),
 
-        ///7777777777777777777777777777777777777777777777777777777777777777777777777  BOTTOM NAVİGATİON BAR İTEM 2   NAVİGATE PAGE 2
+        //////////////////////////////////////////////////////////////////////////  BOTTOM NAVİGATİON BAR İTEM 2   NAVİGATE PAGE 2
         BottomNavigationBarItem(
             title: Padding(
               padding: EdgeInsets.only(top: 6),
@@ -55,11 +53,12 @@ class _BottomNavigationState extends State<BottomNavigation> {
                     color: currentIndex == 1 ? activeColor : passiveColor),
               ),
             ),
-            icon: SvgPicture.asset(
+            icon: InkWell(
+                child: SvgPicture.asset(
               "assets/icons/Star.svg",
               color: currentIndex == 1 ? activeColor : passiveColor,
               height: 30,
-            )),
+            ))),
 
         //////////////////////////////////////////////////////////////////////////////  BOTTOM NAVİGATİON BAR İTEM 3   NAVİGATE PAGE 3
         BottomNavigationBarItem(
@@ -71,11 +70,12 @@ class _BottomNavigationState extends State<BottomNavigation> {
                     color: currentIndex == 2 ? activeColor : passiveColor),
               ),
             ),
-            icon: SvgPicture.asset(
+            icon: InkWell(
+                child: SvgPicture.asset(
               "assets/icons/Star.svg",
               color: currentIndex == 2 ? activeColor : passiveColor,
               height: 30,
-            )),
+            ))),
       ],
       onTap: (index) {
         //////////////////////////////////////////////////////////////////////////////  NAVİGASYONUN YAPILDIGI VE İNDEX İN  DEGİŞTİGİ ALAN
