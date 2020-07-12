@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_sertifier/screens/feeddetail/components/basicbox.dart';
 import 'package:shimmer/shimmer.dart';
 
 class Efect extends StatefulWidget {
@@ -35,6 +36,13 @@ class _EfectState extends State<Efect> {
                   width: MediaQuery.of(context).size.width * 5 / 10,
                 ),
                 /////////////////////////////////////////////////////////////////////////// İMG
+
+                /* ListView.builder(itemCount:5,itemBuilder: (context,index){
+
+                return Box().longBox(context);
+
+              })*/
+
                 Container(
                     margin: EdgeInsets.all(10),
                     color: Colors.red,

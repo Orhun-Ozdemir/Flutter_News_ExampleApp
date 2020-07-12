@@ -1,22 +1,43 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_sertifier/components/bottomNavigation.dart';
+import 'package:flutter_sertifier/screens/feed/feed.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gradient_widgets/gradient_widgets.dart';
 
-class DetailBottom extends StatelessWidget {
+class DetailBottom extends StatefulWidget {
+  DetailBottom({Key key}) : super(key: key);
+
+  @override
+  _DetailBottomState createState() => _DetailBottomState();
+}
+
+class _DetailBottomState extends State<DetailBottom> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 1 / 10,
+      height: MediaQuery.of(context).size.height * 0.9 / 10,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Container(
             child: InkWell(
               onTap: () {},
-              child: Icon(
-                Icons.keyboard_arrow_left,
-                size: 40,
-                color: Colors.grey,
+              child: InkWell(
+                onTap: () {
+                  setState(() {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FeedPage(),
+                        ));
+                  });
+                },
+                child: Icon(
+                  Icons.keyboard_arrow_left,
+                  size: 40,
+                  color: Colors.grey,
+                ),
               ),
             ),
           ),

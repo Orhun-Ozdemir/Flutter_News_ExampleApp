@@ -2,11 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_sertifier/components/bottomNavigation.dart';
 import 'package:flutter_sertifier/screens/feed/feed.dart';
-import 'package:flutter_sertifier/screens/feeddetail/components/DetailBottom.dart';
 import 'package:flutter_sertifier/screens/feeddetail/components/ShimmerEfect.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'components/appbar.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
 
